@@ -1,0 +1,15 @@
+name: Mabl Test Execution
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-mabl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Mabl Tests
+        uses: mablhq/github-run-tests-action@v1
+        with:
+          mabl_api_key: ${{ secrets.MABL_API_KEY }}
