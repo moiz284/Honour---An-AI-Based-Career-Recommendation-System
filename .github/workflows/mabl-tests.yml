@@ -1,4 +1,4 @@
-name: Mabl Test Execution
+name: Run Mabl Tests
 
 on:
   push:
@@ -6,10 +6,13 @@ on:
       - main
 
 jobs:
-  run-mabl:
+  mabl-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Run Mabl Tests
         uses: mablhq/github-run-tests-action@v1
         with:
-          mabl_api_key: ${{ secrets.MABL_API_KEY }}
+          application-id: ${{ secrets.MABL_APP_ID }}
+          environment-id: ${{ secrets.MABL_ENV_ID }}
+        env:
+          MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
