@@ -12,7 +12,7 @@ jobs:
       - name: Run Mabl Tests
         uses: mablhq/github-run-tests-action@v1
         with:
-          application-id: ${{ secrets.MABL_APP_ID }}
-          environment-id: ${{ secrets.MABL_ENV_ID }}
+          application-id: gpc6ILguDHay4NIN93OgNg-a
+          environment-id: kTQRSfXilMUMSm4TvO5XxA-e
         env:
           MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
